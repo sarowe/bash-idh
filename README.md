@@ -41,6 +41,7 @@ bash-idh commands
 -----------------
 
 * `back`
+
    Navigate the directory history by giving this command followed by
    the number corresponding to a directory history entry to which
    you want to return.
@@ -52,22 +53,25 @@ bash-idh commands
    the Bash directory stack).
 
 * `cd`
+
    This function overrides Bash's builtin cd command, to keep the
    directory stack from accumulating non-unique entries.  In every
    other respect, it works the same way as Bash's builtin cd.
 
 * `drop`
-  Use this function to remove individual directory history entries or
-  ranges of them.
 
-  Usage: `drop [n | n-m | -n | n- | all]`
-  (where n,m are directory history entries)
+   Use this function to remove individual directory history entries or
+   ranges of them.
 
-  For example, `drop 15- 6 -2 8-12` will remove the following entries
-  from the Bash directory stack (given that they exist):
+   Usage: `drop [n | n-m | -n | n- | all]`
+   (where n,m are directory history entries)
 
-  --------|--------------------------------------------------
-  `15-`   | 15 (and all entries with numbers greater than 15)
+   For example, `drop 15- 6 -2 8-12` will remove the following entries
+   from the Bash directory stack (given that they exist):
+
+   param  | removed entries
+   -------|--------------------------------------------------
+   `15-`  | 15 (and all entries with numbers greater than 15)
    `6`    | 6
    `-2`   | 1 and 2
    `8-12` | 8, 9, 10, 11 and 12
@@ -75,11 +79,12 @@ bash-idh commands
    `drop all` removes all directory stack entries.
 
 * `tddh` ("Toggle display directory history")
-   Use this command to toggle between three directory history lengths:
-    max (default: 100 entries); moderate (default: 10 entries); and
-    none.  This allows you to trade off screen real estate for
-    immediate info about the Bash directory stack.
 
-    The author uses the readline configuration file, .inputrc, to map
-    the [F9] key to run this command (i.e. `"\e[20~":"tddh\n"`, under
-    vt100 emulation).
+   Use this command to toggle between three directory history lengths:
+   max (default: 100 entries); moderate (default: 10 entries); and
+   none.  This allows you to trade off screen real estate for
+   immediate info about the Bash directory stack.
+
+   The author uses the readline configuration file, .inputrc, to map
+   the [F9] key to run this command (i.e. `"\e[20~":"tddh\n"`, under
+   vt100 emulation).
