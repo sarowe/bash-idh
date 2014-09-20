@@ -21,10 +21,8 @@ If you have enabled **bash-idh**, you'll get a prompt like:
 and you can issue short commands to change the current directory to
 places you've visited recently.  For example, given the above set of
 recently visited directories, `back 3` will change the current directory
-to the 3rd most recent directory you've visited (`/tmp`, labeled `<3>`
-in the above directory history listing).
-
-**bash-idh** was inspired in part by similar ideas from JP Software's 4DOS.
+to the 3rd most recently visited directory (`/tmp`, labeled `<3>` in the
+above directory history listing).
 
 To use **bash-idh**, source `bash-idh.sh` from your `.bashrc` file.
 For example:
@@ -32,8 +30,9 @@ For example:
     source /path/to/bash-idh.sh
 
 **bash-idh** works in part by modifying the value of the `$PROMPT_COMMAND`
-environment variable to prune stale directories from the Bash directory
-stack and then display recently visited directories above the prompt.
+environment variable to call a function that prunes stale directories from
+the Bash directory stack and then displays recently visited directories
+above the prompt.
 
 See the top of `bash-idh.sh` for customization possibilities.
 
@@ -55,13 +54,13 @@ The commands below are intended to be issued from an interactive shell.
 
 * `cd`
 
-   This function overrides Bash's built-in `cd` command, to keep the
+   This command overrides Bash's built-in `cd` command, to keep the
    directory stack from accumulating non-unique entries.  In every
    other respect, it works the same way as Bash's built-in `cd`.
 
 * `drop`
 
-   Use this function to remove individual directory history entries or
+   Use this command to remove individual directory history entries or
    ranges of them.
 
    Usage: `drop [n | n-m | -n | n- | all]`
