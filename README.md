@@ -24,7 +24,10 @@ recently visited directories, `back 3` will change the current directory
 to the 3rd most recently visited directory (`/tmp`, labeled `<3>` in the
 above directory history listing).
 
-To use **bash-idh**, source `bash-idh.sh` from your `.bashrc` file.
+Enabling **bash-idh**
+---------------------
+
+To enable **bash-idh**, source `bash-idh.sh` from your `~/.bashrc` file.
 For example:
 
     source /path/to/bash-idh.sh
