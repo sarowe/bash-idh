@@ -52,8 +52,10 @@ The commands below are intended to be issued from an interactive shell.
 
    Usage: `back n` (where `n` is a directory history entry number)
 
-   For example, `back 3` will change the current directory to the
-   directory listed as `<3>` in the directory history listing.
+   For example, `back 15` will change the current directory to the
+   directory labeled as `<15>` in the directory history listing.
+
+   `back` alone, with no `n`, is equivalent to `back 1`.
 
 * `cd`
 
