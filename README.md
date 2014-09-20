@@ -39,10 +39,10 @@ above the prompt.
 
 See the top of `bash-idh.sh` for customization possibilities.
 
-The commands below are intended to be issued from an interactive shell.
-
 **bash-idh** commands
 ---------------------
+
+The commands below are intended to be issued from an interactive shell.
 
 * `back`
 
